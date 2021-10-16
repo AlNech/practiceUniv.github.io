@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Practice Notebook</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript">
+		//Функция вычисляет площадь, если введенные стороны удовлетворяют свойству треугольника
+			function Area(){
+				let a, b, c, result;
+				a = document.getElementById("inp_1").value;
+				a = parseInt(a);
+				b = document.getElementById("inp_2").value;
+				b = parseInt(b);
+				c = document.getElementById("inp_3").value;
+				c = parseInt(c);
+				if (a + b >= c && a + c >= b && c + b >= a) {
+				  let p = (a + b + c) / 2;
+				  let s = (p * (p - a) * (p - b) * (p - c)) ** (1 / 2);
+				  document.getElementById("result_multi").innerHTML = s;
+				} else {
+				  document.getElementById("result_multi").innerHTML = "Такого треугольника не существует!";
+				}
+				
+         }
+		</script>
+	</head>
+	<body>
+		<div id="wapper">
+			<!--Шапка-->
+			<div id="header">
+				<h2 style="font-family: 'Source Sans Pro', sans-serif; color:white;padding: 10px 0px 0px 300px">Practice Notebook</h2></div>
+
+			<div class="container clearfix" >
+				<!--Меню-->
+				<div id="sidebar">
+					<ul class="menu">
+						<li class="menu__list">
+						  	<a href="Practice.html">Главная</a>
+						 </li>	
+						 <li class="menu__list">
+						  	<a href="#"> Блок - 1 </a>
+						  	<ul class="menu__drop">
+						      <li><a href="z1.html">Простые задачи</a></li>
+						      <li><a href="z2.html">Циклы</a></li>
+						      <li><a href="z3.html">Массивы</a></li>
+						      <li><a href="z4.html">Матрицы</a></li>
+						    </ul>
+						 </li>
+
+
+
+					  <li class="menu__list">
+					  	<a href="#"> Блок - 2 </a>
+					  	<ul class="menu__drop">
+						    <li><a href="z5.html">Схема матрицы</a></li>
+						</ul>
+					  </li>
+					</ul>	
+				</div>
+
+				<!--Иинформация о задаче, решение и ввод-->
+		        <div id="content">
+		          <section class="content-header">
+		            <h1>Тема 1: Простые задачи</h1>
+		          </section>
+		          <p>
+		            Даны действительные числа a, b, c. Определить, существует ли треугольник с такими сторонами, и найти его площадь. 
+		          </p>
+		          <div>
+		          	<h5 style="padding: 0 0 0 10px; font-size: 16px;">Введите значения сторон треугольника</h5>
+							
+                           <div >
+							   <label for="inp_1" style="padding:0px 0px 0px 20px">a</label> 
+							   <label for="inp_2"style="padding:0px 0px 0px 168px">b</label> 
+							   <label for="inp_3"style="padding:0px 0px 0px 168px">c</label>
+							</div> 
+							<!--Ввод сторон треугольника-->
+                           <div style="padding:0px 0px 0px 20px">
+                           	<input type="text" class="form-control" id="inp_1">
+                           <input type="text" class="form-control" id="inp_2" >
+                           <input type="text" class="form-control" id="inp_3" >
+                           <button onclick="Area()">Площадь</button>
+                           </div>
+ 
+					</div>
+					
+                    <hr>
+                    <div style="padding:0px 5px ">
+                        Рeзультат: <span id="result_multi"></span></div>
+		          </div>
+		        </div>
+			</div>
+			
+
+			<!--Футер-->
+			<div id="footer" style="font-family: 'Source Sans Pro', sans-serif; padding: 10px;font-size:12px; ">© 2020</div>
+
+		</div>
+	</body>
+</html>

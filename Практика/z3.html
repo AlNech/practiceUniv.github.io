@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Practice Notebook</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wapper">
+      <!--Шапка-->
+      <div id="header">
+        <h2
+          style="
+            font-family: 'Source Sans Pro', sans-serif;
+            color: white;
+            padding: 10px 0px 0px 300px;
+          "
+        >
+          Practice Notebook
+        </h2>
+      </div>
+
+      <div class="container clearfix">
+        <!--Меню-->
+        <div id="sidebar">
+          <ul class="menu">
+            <li class="menu__list">
+              <a href="Practice.html">Главная</a>
+            </li>
+            <li class="menu__list">
+              <a href="#"> Блок - 1 </a>
+              <ul class="menu__drop">
+                <li><a href="z1.html">Простые задачи</a></li>
+                <li><a href="z2.html">Циклы</a></li>
+                <li><a href="z3.html">Массивы</a></li>
+                <li><a href="z4.html">Матрицы</a></li>
+              </ul>
+            </li>
+
+            <li class="menu__list">
+              <a href="#"> Блок - 2 </a>
+              <ul class="menu__drop">
+                <li><a href="z5.html">Схема матрицы</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!--Информация о задаче, решение и ввод-->
+        <div id="content">
+          <section class="content-header">
+            <h1>Тема 3: Массивы</h1>
+          </section>
+          <p>
+            Даны значения N элементов целочисленного массива. Найти наиболее
+            часто встречающееся число; если таковых будет несколько, то указать
+            их все.
+          </p>
+          <div>
+            <label style="padding: 0px 0px 0px 20px;">Длина массива:</label>
+            <label style="padding: 0px 0px 0px 60px;">min:</label>
+            <label style="padding: 0px 0px 0px 148px;">max:</label>
+          </div>
+          <!--Ввод длины, максимального и минимального значений массива-->
+          <div style="padding: 0px 0px 0px 20px;">
+            <input type="text" id="length" />
+            <input type="text" id="amin" />
+            <input type="text" id="amax" />
+          </div>
+
+          <div style="padding: 10px 10px 0px 20px;">
+            <button>Сгенерировать</button>
+          </div>
+
+          <!--Вывод массива-->
+          <hr />
+          <div style="padding: 0px 5px;">
+            Полученный массив: <span id="out"></span>
+          </div>
+
+          <hr />
+          <div style="padding: 0px 5px;">
+            Часто втречающееся число (числа): <span id="result"></span>
+          </div>
+
+          <script src="hp.js"></script>
+        </div>
+      </div>
+
+      <!--Футер-->
+      <div
+        id="footer"
+        style="
+          font-family: 'Source Sans Pro', sans-serif;
+          padding: 10px;
+          font-size: 12px;
+        "
+      >
+        © 2020
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Practice Notebook</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript">
+		//Функция вычисляет сумму и произведение цифр числа n в записи m-ой системе счисления
+			function sumprod(){
+			    let n, m, sum, prod;
+				n = document.getElementById("inp_1").value;
+				n = parseInt(n);
+				m = document.getElementById("inp_2").value;
+				m = parseInt(m);
+				sum=0;
+				prod=1;
+				while (n){
+					sum=(n%m)+sum;
+					prod=(n%m)*prod;
+					n=parseInt(n/m);	
+				}
+				document.getElementById("sum").innerHTML = sum;
+				document.getElementById("prod").innerHTML = prod;
+				
+				
+         }
+		</script>
+	</head>
+	<body>
+		<div id="wapper">
+			<!--Шапка-->
+			<div id="header">
+				<h2 style="font-family: 'Source Sans Pro', sans-serif; color:white;padding: 10px 0px 0px 300px">Practice Notebook</h2></div>
+
+			<div class="container clearfix" >
+				<!--Меню-->
+				<div id="sidebar">
+					<ul class="menu">
+						<li class="menu__list">
+						  	<a href="Practice.html">Главная</a>
+						 </li>	
+						 <li class="menu__list">
+						  	<a href="#"> Блок - 1 </a>
+						  	<ul class="menu__drop">
+						      <li><a href="z1.html">Простые задачи</a></li>
+						      <li><a href="z2.html">Циклы</a></li>
+						      <li><a href="z3.html">Массивы</a></li>
+						      <li><a href="z4.html">Матрицы</a></li>
+						    </ul>
+						 </li>
+
+
+
+					  <li class="menu__list">
+					  	<a href="#"> Блок - 2 </a>
+					  	<ul class="menu__drop">
+						    <li><a href="z5.html">Схема матрицы</a></li>
+						</ul>
+					  </li>
+					</ul>	
+				</div>
+
+				<!--Информация о задаче, решение и ввод-->
+				<div id="content">
+		          <section class="content-header">
+		            <h1>Тема 2: Циклы</h1>
+		          </section>
+		          <p>
+		            Дано натуральные числа n, m (2<=m<=16). Найти сумму и произведение цифр числа n в записи этого числа в m-ичной системе счисления.
+		          </p>
+		          <h5 style="padding: 0 0 0 10px; font-size: 16px;">Введите значения </h5>
+                        <div>
+							<label for="inp_1"style="padding:0px 0px 0px 20px">n</label> 
+						    <label for="inp_2"style="padding:0px 0px 0px 170px">m</label>
+						</div>
+						<!--Ввод числа и системы счисления-->	
+                        <div style="padding:0px 0px 0px 20px">
+                           <input type="text" class="form-control" id="inp_1">
+                           <input type="text" class="form-control" id="inp_2">
+						   <button onclick="sumprod()" >Поиск</button>
+						</div>
+						
+					<hr>
+                    <div style="padding:0px 5px ">Сумма: <span id="sum"></span></div>
+						
+					<hr>
+                    <div style="padding:0px 5px ">Произведение: <span id="prod"></span></div>
+		            </div>
+		        </div>
+			</div>
+			
+
+			<!--Футер-->
+			<div id="footer" style="font-family: 'Source Sans Pro', sans-serif; padding: 10px;font-size:12px; ">© 2020</div>
+
+		</div>
+	</body>
+</html>

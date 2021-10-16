@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Practice Notebook</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wapper">
+      <!--Шапка-->
+      <div id="header">
+        <h2
+          style="
+            font-family: 'Source Sans Pro', sans-serif;
+            color: white;
+            padding: 10px 0px 0px 300px;
+          "
+        >
+          Practice Notebook
+        </h2>
+      </div>
+
+      <div class="container clearfix">
+        <!--Меню-->
+        <div id="sidebar">
+          <ul class="menu">
+            <li class="menu__list">
+              <a href="Practice.html">Главная</a>
+            </li>
+            <li class="menu__list">
+              <a href="#"> Блок - 1 </a>
+              <ul class="menu__drop">
+                <li><a href="z1.html">Простые задачи</a></li>
+                <li><a href="z2.html">Циклы</a></li>
+                <li><a href="z3.html">Массивы</a></li>
+                <li><a href="z4.html">Матрицы</a></li>
+              </ul>
+            </li>
+
+            <li class="menu__list">
+              <a href="#"> Блок - 2 </a>
+              <ul class="menu__drop">
+                <li><a href="z5.html">Схема матрицы</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!--Информация о задаче, решение и ввод-->
+        <div id="content">
+          <section class="content-header">
+            <h1>Схема матрицы</h1>
+          </section>
+
+          <img src="shem.jpg" />
+
+          <div style="padding: 3px 10px;">Длина матрицы(n):</div>
+          <div style="padding: 3px 10px;"><input type="text" id="n" /></div>
+
+          <div style="padding: 3px 10px;">
+            <button>Сгенерировать</button>
+          </div>
+
+          <div style="padding: 3px 10px;">Полученная матрица</div>
+          <pre id="out-matrix"></pre>
+
+          <script src="hp3.js"></script>
+        </div>
+      </div>
+      <!--- Футер-->
+      <div
+        id="footer"
+        style="
+          font-family: 'Source Sans Pro', sans-serif;
+          padding: 10px;
+          font-size: 12px;
+        "
+      >
+        © 2020
+      </div>
+    </div>
+  </body>
+</html>
